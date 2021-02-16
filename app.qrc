@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/chart.png</file>
+        <file>res/chart_down.png</file>
+        <file>res/note.png</file>
+        <file>res/note_down.png</file>
+        <file>res/users/0.png</file>
+    </qresource>
+</RCC>
