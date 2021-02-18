@@ -72,11 +72,11 @@ QToolButton::checked
          <property name="minimumSize">
           <size>
            <width>48</width>
-           <height>0</height>
+           <height>48</height>
           </size>
          </property>
          <property name="text">
-          <string>日志</string>
+          <string>事项</string>
          </property>
          <property name="icon">
           <iconset resource="../app.qrc">
@@ -104,7 +104,7 @@ QToolButton::checked
          <property name="minimumSize">
           <size>
            <width>48</width>
-           <height>0</height>
+           <height>48</height>
           </size>
          </property>
          <property name="text">
@@ -122,6 +122,32 @@ QToolButton::checked
          </property>
          <property name="checkable">
           <bool>true</bool>
+         </property>
+         <property name="toolButtonStyle">
+          <enum>Qt::ToolButtonTextUnderIcon</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QToolButton" name="btnSearch">
+         <property name="minimumSize">
+          <size>
+           <width>48</width>
+           <height>48</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>查询</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../app.qrc">
+           <normaloff>:/res/search.png</normaloff>:/res/search.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
          </property>
          <property name="toolButtonStyle">
           <enum>Qt::ToolButtonTextUnderIcon</enum>
@@ -157,6 +183,14 @@ QToolButton::checked
   
 	background-color: rgb(242, 242, 242);
 }
+#lvData::Item:hover{
+background:rgba(255,255,255,0);
+border:none;
+ }
+#lvData::Item:selected:active{
+background:rgba(255,255,255，0);
+border:none;
+ }
 #wgtInput
 {
   
@@ -215,10 +249,48 @@ QToolButton::checked
             <height>48</height>
            </size>
           </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <property name="leftMargin">
+            <number>32</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>14</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>记录的事项</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>595</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
          </widget>
         </item>
         <item>
-         <widget class="QListWidget" name="lvData"/>
+         <widget class="QListWidget" name="lvData">
+          <property name="sizeAdjustPolicy">
+           <enum>QAbstractScrollArea::AdjustToContents</enum>
+          </property>
+          <property name="resizeMode">
+           <enum>QListView::Adjust</enum>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QWidget" name="wgtInput" native="true">
@@ -258,6 +330,59 @@ QToolButton::checked
                <height>36</height>
               </size>
              </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton
+{
+   border:none;
+   width:60px;
+   height:24px;
+   color:rgb(255,255,255);
+   background-color:rgb(197,197,197);
+}
+QPushButton::checked
+{
+   border:none;
+   width:60px;
+   height:24px;
+   color:rgb(255,255,255);
+   background-color:rgb(220,20,60);
+}</string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <item>
+               <widget class="QPushButton" name="btnIsEmergent">
+                <property name="text">
+                 <string>紧急</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnIsImportant">
+                <property name="text">
+                 <string>重要</string>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>587</width>
+                  <height>15</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
             </widget>
            </item>
            <item>
@@ -315,7 +440,7 @@ QToolButton::checked
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="page_2"/>
+      <widget class="QWidget" name="pageChart"/>
      </widget>
     </item>
    </layout>

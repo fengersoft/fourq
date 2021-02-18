@@ -5,5 +5,6 @@
         <file>res/note.png</file>
         <file>res/note_down.png</file>
         <file>res/users/0.png</file>
+        <file>res/search.png</file>
     </qresource>
 </RCC>

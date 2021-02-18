@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>794</width>
-    <height>95</height>
+    <height>101</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,8 +20,11 @@
    
 	font: 11pt &quot;微软雅黑&quot;;
     padding-left:16px;
-    border-radius:25px;
-}</string>
+   
+    border:2px groove white;
+    border-radius:5px;
+}
+</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <property name="spacing">
@@ -67,7 +70,7 @@
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>328</width>
+          <width>323</width>
           <height>20</height>
          </size>
         </property>
@@ -77,20 +80,21 @@
        <widget class="QLabel" name="lblDate">
         <property name="minimumSize">
          <size>
-          <width>120</width>
+          <width>130</width>
           <height>0</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>120</width>
+          <width>130</width>
           <height>16777215</height>
          </size>
         </property>
         <property name="styleSheet">
          <string notr="true">background-color: rgb(218, 218, 218);
 color: rgb(255, 255, 255);
-border-radius:15px;</string>
+border:2px groove rgba(218, 218, 218,0);
+    border-radius:5px;</string>
         </property>
         <property name="text">
          <string>2021-02-16 00:00:00</string>
@@ -107,7 +111,7 @@ border-radius:15px;</string>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>328</width>
+          <width>323</width>
           <height>20</height>
          </size>
         </property>
@@ -120,7 +124,7 @@ border-radius:15px;</string>
     <widget class="QWidget" name="widget_2" native="true">
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
-       <widget class="UserIconWidget" name="widget_3" native="true">
+       <widget class="UserIconWidget" name="wgtIcon" native="true">
         <property name="minimumSize">
          <size>
           <width>48</width>
@@ -139,6 +143,9 @@ border-radius:15px;</string>
        <widget class="QLineEdit" name="edtInfo">
         <property name="text">
          <string>测试信息</string>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
